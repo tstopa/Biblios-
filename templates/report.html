@@ -1,0 +1,32 @@
+<html lang = "en">
+   <head>
+      <title>Biblios++</title>
+   </head>
+   <body>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+		
+      <h3>Books (<a href = "{{ url_for('newbook') }}">Add Book
+         </a>)</h3>
+      
+      <table>
+         <thead>
+            <tr>
+               <th>Author</th>
+               <th>Title</th>
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for book in books %}
+               <tr>
+                  <td>{{ book.author }}</td>
+                  <td>{{ book.title }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      
+   </body>
+</html>

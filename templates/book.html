@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>Biblios++</title>
+    </head>
+    <body>
+        {% if book %}
+        <h1>Book ID: {{ book.id }}</h1>
+        {% else %}
+        <h1>New book!</h1>
+        {% endif %}
+    </body>
+</html>
